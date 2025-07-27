@@ -1,17 +1,21 @@
-# Ignore Python cache and compiled files
-__pycache__/
+# Python
 *.pyc
-*.pyo
+__pycache__/
 
-# Ignore Django database
+# Django
 db.sqlite3
+*.log
+media/
+staticfiles/
 
-# Ignore virtual environments
+# Environment
+.env
+*.env
+
+# Virtual Environment
 venv/
 .venv/
 
-# Ignore environment files and secrets
-.env
-
-# VS Code config (optional)
+# Editor/IDE
 .vscode/
+.idea/

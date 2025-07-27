@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<div class="text-5xl font-bold" >
+My_first_app page
+</div>
+{% endblock  %}
+
+{% block  content%}
+<div class="text-5xl font-bold p-2" >
+<h1> This is my first app page.... </h1>
+
+</div>
+
+<div class="grid grid-col-3 gap-4 mar-4">
+    <div class="flex flex-wrap gap-4">
+{% for chai in chais %}
+<div class='bg-blue-800 p-5'>
+
+    <img src="{{ chai.image.url }}" alt="Image not found" class="w-full h-48 object-cover rounded">
+    <h1 class="text-2xl font-bold">{{chai.name}}</h1>
+    <a href="{% url 'chai_detail' chai.id %}">
+        <button
+            
+  type="button"
+  class="inline-flex items-center justify-center px-4 py-2
+   border border-transparent text-sm font-medium rounded-md
+    text-white bg-orange-600 
+  hover:bg-orange-700 focus:outline-none focus:ring-2 
+  focus:ring-offset-2 focus:ring-orange-500 w-[100%]"
+>
+
+            {{chai.type}}-{{chai.id}}
+        </button>
+    </a>
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock  %}

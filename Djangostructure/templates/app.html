@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+My_first_app page
+{% endblock  %}
+{% block  content%}
+<h1> This is my first app page.... </h1>
+{% for chai in chais %}
+<div class='chai_item'>
+    <h1>Anndsio</h1>
+    <img src="{{chai.image.url}}" alt="img not found">
+    <h1>{{chai.name}}</h1>
+</div>{% endfor %}
+<h1>ENd of for loop block</h1>
+
+{% endblock  %};

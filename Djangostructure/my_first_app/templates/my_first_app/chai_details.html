@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+chai detail page
+{% endblock  %}
+
+{% block  content%}
+<h1>Chai detail page</h1>
+<h3>{{chai.name}}</h3>
+    {% comment %} =models.TextField(default='') {% endcomment %}
+<h3>{{chai.description}}</h3>
+{% endblock  %}
